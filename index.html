@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/home-large.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Club</title>
+</head>
+<body>
+    <header>
+        <img src="/images/logo.svg" alt="Site Logo" width="64" height="64">
+        <span>Reading Club</span>
+        <button id="nav-button" class="hamburguer" aria-label="navigation"></button>
+    </header>
+
+        <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="https://karenmahr.github.io/wdd231/">Home</a></li>
+            <li><a href="#">My club</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to the Reading Club!</h1>
+    <div class="hero">
+        <img src="/images/hero-image.jpg" alt="Placeholder image" id="hero-image">
+        <button id="my-club">My club</button>
+        <button id="choose-book">Choose a book</button>
+    </div>
+
+    <main>
+        <h2>Book Club´s recommended reading</h2>
+        <div class="recommendations">
+            <div id="recommendation1">
+                <img src="/images/placeholder.jpg" alt="Placeholder image">
+                <div class="book-details">
+                    <p>Book Title 1</p>
+                    <p>Author 1</p>
+                </div>
+            </div>
+            <div id="recommendation2">
+                <img src="/images/placeholder.jpg" alt="Placeholder image">
+                <div class="book-details">
+                    <p>Book Title 2</p>
+                    <p>Author 2</p>
+                </div>
+            </div>
+            <div id="recommendation3">
+                <img src="/images/placeholder.jpg" alt="Placeholder image">
+                <div class="book-details">
+                    <p>Book Title 3</p>
+                    <p>Author 3</p>
+                </div>
+            </div>
+            <div id="recommendation4">
+                <img src="/images/placeholder.jpg" alt="Placeholder image">
+                <div class="book-details">
+                    <p>Book Title 4</p>
+                    <p>Author 4</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/karenmahr" target="_blank"><img src="/images/github.svg" 
+                alt="Github" width="512" height="512"></a>
+            <a href="https://www.linkedin.com/in/karen-mahr/" target="_blank"><img src="/images/linkedin.svg"
+                    alt="Linkedin" width="512" height="512"></a>
+        </div>
+        <p>© <span id="currentyear"></span> Karen Mahr Argentina</p>
+        <p><span id="lastModified"></span></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+:root {
+    --neutral: #c7bdb2bb;
+    --primary: #3A2618;
+    --secondary: #37423D;
+    --accent: #754043;
+    --font-body: "Roboto", "Courier Prime";
+}
+
+*{
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #3A2618;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3A2618;
+}
+
+.hamburguer {
+    background: none;
+    border: none;
+    color: #3A2618;
+    cursor: pointer
+}
+
+.hamburguer::before {
+    content: "\2630";
+}
+
+.hamburguer.show::before {
+    content: "\00D7"
+}
+
+.navigation {
+    display: none;
+    background-color: #f7e7ce96;
+}
+
+.navigation.show {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #373f4e;
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    font-weight: bold
+}
+
+a:hover {
+    text-decoration: overline;
+}
+
+.active {
+    color: #6A2B3F;
+}
+
+footer {
+    background-color: #c7bdb2bb;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    column-gap: 12px;
+    justify-content: center;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #63728e54 solid 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 6px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #f7e7ce;
+}
+
+body{
+    background-color: #c7bdb2bb;
+}
+
+h1 {
+    color: #37423D;
+    font-size: 2rem;
+    font-family: 'Courier Prime', monospace;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Courier Prime', monospace;
+    color: #37423D;
+    padding: 20px 0px 0px 0px;
+}
+
+.hero{
+    position:relative;
+    display:block;
+    margin: 0 auto;
+    padding: 0rem;
+    max-width: 800px;
+}
+
+#hero-image {
+    width: 100%;
+    height: auto;
+    display:block;
+}
+
+#my-club, #choose-book{
+    position:absolute;
+    padding:1rem;
+    z-index: 10;
+    font-size: 1rem;
+    background-color: #3A2618;
+    border:2px solid #c7bdb2;
+    color:#c7bdb2;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#my-club{
+    bottom:20px;
+    left:20px; 
+}
+#choose-book{
+    bottom:20px;
+    left:130px;
+}
+
+#my-club:hover, #choose-book:hover{
+    background-color: #754043;
+}
+
+.recommendations img{
+    width: 20%;
+    height: auto;
+    display:block;
+}
+
+#recommendation1, #recommendation2, #recommendation3, #recommendation4{
+    border:solid 1px #3A2618;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+}
