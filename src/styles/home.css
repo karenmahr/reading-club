@@ -1,7 +1,7 @@
 :root {
-    --neutral: #c7bdb2bb;
+    --neutral: #f7e7ce;
     --primary: #3A2618;
-    --secondary: #37423D;
+    --secondary: #002414;
     --accent: #754043;
     --font-body: "Roboto", "Courier Prime";
 }
@@ -12,6 +12,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*HEADER*/
 
 header {
     display: grid;
@@ -50,8 +52,8 @@ header span {
 }
 
 .navigation {
-    display: ;
-    background-color: #f7e7ce96;
+    display:none;
+    background-color: #FFF8EC;
 }
 
 .navigation.show {
@@ -64,7 +66,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #373f4e;
+    color: #3A2618;
     text-align: center;
     padding: 1rem;
     display: block;
@@ -79,8 +81,10 @@ a:hover {
     color: #6A2B3F;
 }
 
+/*FOOTER*/
+
 footer {
-    background-color: #c7bdb2bb;
+    background-color: #FFF8EC;
     padding: 1rem 10px;
     text-align: center;
 }
@@ -107,25 +111,28 @@ footer {
 }
 
 .social a:hover {
-    background-color: #f7e7ce;
+    background-color: #FFF8EC;
 }
 
+/*HOME PAGE*/
+
 body{
-    background-color: #c7bdb2bb;
+    background-color: #FFF8EC;
 }
 
 h1 {
-    color: #37423D;
+    color: #002414;
     font-size: 2rem;
     font-family: 'Courier Prime', monospace;
-    padding: 20px 0px 0px 0px;
+    padding: 20px 0px 40px 0px;
     text-align: center;
 }
 
+
 h2{
     font-family: 'Courier Prime', monospace;
-    color: #37423D;
-    padding: 20px 0px 0px 0px;
+    color: #002414;
+    padding: 30px 0px 0px 30px;
 }
 
 .hero{
@@ -142,14 +149,13 @@ h2{
     display:block;
 }
 
-#my-club, #choose-book{
+#my-club, #choose{
     position:absolute;
     padding:1rem;
     z-index: 10;
-    font-size: 1rem;
     background-color: #3A2618;
-    border:2px solid #c7bdb2;
-    color:#c7bdb2;
+    border:1px solid #FFF8EC;
+    color:#FFF8EC;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
@@ -159,13 +165,19 @@ h2{
     bottom:20px;
     left:20px; 
 }
-#choose-book{
+#choose{
     bottom:20px;
     left:130px;
 }
 
-#my-club:hover, #choose-book:hover{
-    background-color: #754043;
+#my-club:hover, #choose:hover{
+    background-color: #002414;
+    color:#FFF8EC;
+    border:2px solid #FFF8EC;
+}
+
+.recommendations{
+    padding: 0rem 1.5rem;
 }
 
 .recommendations img{
@@ -176,8 +188,52 @@ h2{
 
 #recommendation1, #recommendation2, #recommendation3, #recommendation4{
     border:solid 1px #3A2618;
-    margin: 5px;
+    border-radius: 5px;
+    margin:7px 5px;
     display: grid;
     grid-template-columns: auto auto;
     padding: 5px;
+    background-color: white;
 }
+
+/*FORMS*/
+
+form{
+    padding: 2rem;
+}
+
+fieldset{
+    border: 1px solid #3a261875;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+form button{
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    background-color: #FFF8EC;
+    color:#3A2618;
+    border: 1px solid #3A2618;
+    font-weight: bold;
+    font-family: 'Courier Prime', monospace;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+form button:hover{
+    background-color: #002414;
+    color:#FFF8EC;
+}
+
+legend{
+    font-family: 'Courier Prime', monospace;
+    color: #002414;
+    font-size: 1rem;
+    padding-bottom: .5rem;
+}
+
+#about{
+    padding:1rem;
+}
+
+

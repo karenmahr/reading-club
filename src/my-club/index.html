@@ -18,21 +18,31 @@
     <form id="register-form">
         <fieldset>
             <legend>Register My Club</legend>
+            <fieldset>
             <legend>Name of the group</legend>
-            <label><input type="text" name="gname" required/></label>
+            <label><input type="text" name="gname" id="gname" required/></label>
+    </fieldset>
+            <fieldset>
             <legend>About Us</legend>
-            <label><input type="text" name="about" placeholder="Tell us about your group" /></label>
+            <label><input type="text" name="about" placeholder="Tell us about your group" id="about"/></label>
+       </fieldset>  
+       <fieldset> 
             <legend>Type of group</legend>
-            <label><input type="radio" name="family" value="family"/> Family</label>
-            <label><input type="radio" name="family" value="family"/> Friends</label>
-            <label><input type="radio" name="type" value="friends" > Other</label>
+            <label><input type="radio" name="family" value="family" id="type"/> Family</label>
+            <label><input type="radio" name="family" value="family" id="type"/> Friends</label>
+            <label><input type="radio" name="type" value="other" id="type"> Other</label>
+            </fieldset>  
+
+            <fieldset>
             <legend>Group Size</legend>
             <select required>
-                <option value="two">Two</option>
-                <option value="three">Three</option>
-                <option value="four">Four</option>
-                <option value="more">Five or more</option>
+                <option value="" disabled selected hidden>Select group size</option>
+                <option value="two" id="size">Two</option>
+                <option value="three" id="size">Three</option>
+                <option value="four" id="size">Four</option>
+                <option value="more" id="size">Five or more</option>
             </select>
+            </fieldset>
         </fieldset>    
         <button type="submit">Register</button>
     </form>

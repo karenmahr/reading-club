@@ -19,6 +19,7 @@
             <legend>Personal Enjoyment</legend>
             <label for="enjoyment">How much did you enjoyed your book?</label>
             <select id="enjoyment" name="enjoyment">
+                <option value="" disabled selected hidden>-</option>
                 <option value="1">1 - Not at all</option>
                 <option value="2">2 - Slightly</option>
                 <option value="3">3 - Moderately</option>
@@ -30,6 +31,7 @@
             <legend>Personages</legend>
             <label for="personages">Did you felt a connection with the characters?</label>
             <select id="personages" name="personages">
+                <option value="" disabled selected hidden>-</option>
                 <option value="1">1 - Not at all</option>
                 <option value="2">2 - Slightly</option>
                 <option value="3">3 - Moderately</option>
@@ -41,6 +43,7 @@
             <legend>Trama</legend>
             <label for="trama">Did the trama kept you engaged?</label>
             <select id="trama" name="trama">
+                <option value="" disabled selected hidden>-</option>
                 <option value="1">1 - Not at all</option>
                 <option value="2">2 - Slightly</option>
                 <option value="3">3 - Moderately</option>
@@ -52,6 +55,7 @@
             <legend>Overall</legend>
             <label for="overall">How would you rate the book overall?</label>
             <select id="overall" name="overall">
+                <option value="" disabled selected hidden>-</option>
                 <option value="1">1 - Not at all</option>
                 <option value="2">2 - Slightly</option>
                 <option value="3">3 - Moderately</option>
@@ -63,6 +67,8 @@
             <legend>Review</legend>
             <label for="comments">Please write your review</label>
             <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
