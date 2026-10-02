@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/my-club-large.css"/>
+    <title>My Books</title>
+</head>
+<body>
+    <header>
+        <img src="/images/logo.svg" alt="Site Logo" width="64" height="64">
+        <span>Reading Club</span>
+        <button id="nav-button" class="hamburguer" aria-label="navigation"></button>
+    </header>
+    <h1>Survey</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Enjoyment</legend>
+            <label for="enjoyment">How much did you enjoyed your book?</label>
+            <select id="enjoyment" name="enjoyment">
+                <option value="1">1 - Not at all</option>
+                <option value="2">2 - Slightly</option>
+                <option value="3">3 - Moderately</option>
+                <option value="4">4 - Quite a bit</option>
+                <option value="5">5 - A lot</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Personages</legend>
+            <label for="personages">Did you felt a connection with the characters?</label>
+            <select id="personages" name="personages">
+                <option value="1">1 - Not at all</option>
+                <option value="2">2 - Slightly</option>
+                <option value="3">3 - Moderately</option>
+                <option value="4">4 - Quite a bit</option>
+                <option value="5">5 - A lot</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Trama</legend>
+            <label for="trama">Did the trama kept you engaged?</label>
+            <select id="trama" name="trama">
+                <option value="1">1 - Not at all</option>
+                <option value="2">2 - Slightly</option>
+                <option value="3">3 - Moderately</option>
+                <option value="4">4 - Quite a bit</option>
+                <option value="5">5 - A lot</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Overall</legend>
+            <label for="overall">How would you rate the book overall?</label>
+            <select id="overall" name="overall">
+                <option value="1">1 - Not at all</option>
+                <option value="2">2 - Slightly</option>
+                <option value="3">3 - Moderately</option>
+                <option value="4">4 - Quite a bit</option>
+                <option value="5">5 - A lot</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Review</legend>
+            <label for="comments">Please write your review</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    </form>
+</body>
+</html>

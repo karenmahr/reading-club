@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/my-club-large.css"/>
+    <title>My Club</title>
+</head>
+<body>
+    <header>
+        <img src="/images/logo.svg" alt="Site Logo" width="64" height="64">
+        <span>Reading Club</span>
+        <button id="nav-button" class="hamburguer" aria-label="navigation"></button>
+    </header>
+    <h1>My Club</h1>
+
+    <form id="register-form">
+        <fieldset>
+            <legend>Register My Club</legend>
+            <legend>Name of the group</legend>
+            <label><input type="text" name="gname" required/></label>
+            <legend>About Us</legend>
+            <label><input type="text" name="about" placeholder="Tell us about your group" /></label>
+            <legend>Type of group</legend>
+            <label><input type="radio" name="family" value="family"/> Family</label>
+            <label><input type="radio" name="family" value="family"/> Friends</label>
+            <label><input type="radio" name="type" value="friends" > Other</label>
+            <legend>Group Size</legend>
+            <select required>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="more">Five or more</option>
+            </select>
+        </fieldset>    
+        <button type="submit">Register</button>
+    </form>
+    
+</body>
+</html>

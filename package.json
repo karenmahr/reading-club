@@ -2,11 +2,10 @@
   "name": "reading-club",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -15,12 +14,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/karenmahr/reading-club/issues"
   },
   "homepage": "https://github.com/karenmahr/reading-club#readme",
-  "dependencies": {
-    "express": "^5.2.1"
+  "devDependencies": {
+    "vite": "^8.3.2"
   }
 }
