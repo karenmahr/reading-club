@@ -131,7 +131,7 @@ h1 {
 }
 
 
-h2{
+h2,h3{
     font-family: 'Courier Prime', monospace;
     color: #002414;
     padding: 30px 0px 0px 30px;
@@ -182,20 +182,30 @@ h2{
     padding: 0rem 1.5rem;
 }
 
-.recommendations img{
-    width: 20%;
-    height: auto;
-    display:block;
+.recommendations img, .books-grid img{
+    width: auto;
+    height: 60px;
+    border-radius: 5px;
 }
 
 #recommendation1, #recommendation2, #recommendation3, #recommendation4{
-    border:solid 1px #3A2618;
     border-radius: 5px;
     margin:7px 5px;
+    padding: 5px;
+}
+
+.search-form{
+    padding:0;
+}
+
+.book-card{
     display: grid;
     grid-template-columns: auto auto;
-    padding: 5px;
+    margin:.4rem;
+    border:1px solid #3a2618ab;
     background-color: white;
+    padding:.3rem;
+    border-radius: 10px;
 }
 
 /*FORMS*/
@@ -238,6 +248,13 @@ legend{
     padding:1rem;
 }
 
+.search-input{
+    padding: .5rem 2rem;
+    border: 1px solid #3A2618;
+    border-radius: 5px;
+    margin:1rem;
+}
+
 /*SUCCESS*/
 
 .divider{
@@ -245,4 +262,12 @@ legend{
     border: 1px solid #754043;
     margin: 3rem;
     text-align: center;
+}
+
+/*MY BOOKS*/
+.read-block{
+    padding: 1rem 4rem 1rem 4rem;
+    margin: 1rem 4rem 1rem 4rem;
+    border:1px solid #3a261857;
+    border-radius: 10px;
 }
