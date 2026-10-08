@@ -15,9 +15,9 @@
 
 /*HEADER*/
 
-header {
+#main-header {
     display: grid;
-    grid-template-columns: 24px auto 44px;
+    grid-template-columns: 24px 1fr 44px;
     padding: 5px 0 5px 10px;
     align-items: end;
     border-bottom: solid 1px #3A2618;
@@ -54,6 +54,7 @@ header span {
 .navigation {
     display:none;
     background-color: #FFF8EC;
+    grid-column: 1 / -1;
 }
 
 .navigation.show {
@@ -70,7 +71,8 @@ a {
     text-align: center;
     padding: 1rem;
     display: block;
-    font-weight: bold
+    font-weight: bold;
+    border-bottom: 1px solid #3a26182c;
 }
 
 a:hover {
@@ -236,4 +238,11 @@ legend{
     padding:1rem;
 }
 
+/*SUCCESS*/
 
+.divider{
+    padding: 3rem;
+    border: 1px solid #754043;
+    margin: 3rem;
+    text-align: center;
+}

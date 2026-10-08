@@ -1,4 +1,4 @@
-import { loadHeaderFooter, clickNav, setCurrentYear } from './utils.mjs';
+import { loadHeaderFooter, clickNav, setCurrentYear } from '../js/utils.mjs';
 
 async function init() {
   await loadHeaderFooter();
