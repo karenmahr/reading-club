@@ -130,7 +130,6 @@ h1 {
     text-align: center;
 }
 
-
 h2,h3{
     font-family: 'Courier Prime', monospace;
     color: #002414;
@@ -252,7 +251,7 @@ legend{
     padding: .5rem 2rem;
     border: 1px solid #3A2618;
     border-radius: 5px;
-    margin:1rem;
+    margin:.5rem;
 }
 
 /*SUCCESS*/
