@@ -127,7 +127,22 @@ h1 {
     font-size: 2rem;
     font-family: 'Courier Prime', monospace;
     padding: 20px 0px 40px 0px;
-    text-align: center;
+    margin-left: 130px;
+    overflow:hidden;
+    white-space:nowrap;
+    width:20px;
+    animation: 
+        typing 4s steps(24, end) forwards,
+        blink 0.75s step-end infinite;
+}
+
+@keyframes typing{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
 }
 
 h2,h3{
