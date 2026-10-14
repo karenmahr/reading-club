@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/my-club-large.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/survey-js-ui/survey.min.css" />
     <script src="poll.mjs" type="module"></script>
     <title>My Club</title>
 </head>
 <body>
     <header id="main-header"></header>
-    </body>
-    <h1>Create a poll</h1>
+    
+    <h1>Club poll</h1>
 
 <div class="read-block" data-key="readBooks">
-    <h2>Add a book to the poll</h2>
+    <h2>Propose a book</h2>
     <section class="search-section">
         <form class="search-form">
             <input type="text" class="search-input" placeholder="Enter book title" required>
@@ -26,13 +27,12 @@
     <section class="read-books-section">
         <div class="read-books-container books-grid"></div>
     </section>
-    </div>
+</div>
 
-    <div class="poll">
-        <div class="question"></div>
-        <div class="answers"></div>
-    </div>
-
+    <section class="poll-section">
+        <h2>Vote a book</h2>
+        <div id="surveyContainer"></div>
+    </section>
 
     <footer id="main-footer"></footer>
 </body>

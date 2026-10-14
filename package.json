@@ -21,5 +21,9 @@
   "homepage": "https://github.com/karenmahr/reading-club#readme",
   "devDependencies": {
     "vite": "^8.3.2"
+  },
+  "dependencies": {
+    "survey-core": "^3.2.1",
+    "survey-js-ui": "^3.2.1"
   }
 }

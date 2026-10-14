@@ -1,4 +1,6 @@
 import { loadHeaderFooter, clickNav, setCurrentYear } from '../js/utils.mjs';
+import { Model } from "survey-core";
+import { Survey } from "survey-js-ui";
 
 async function init() {
   await loadHeaderFooter();
@@ -28,6 +30,8 @@ document.querySelectorAll(".read-block").forEach((block) => {
       `
       )
       .join("");
+
+      updateSurvey(books);
   }
    function showResult(book) {
     const imageUrl = book.cover_i 
@@ -75,76 +79,35 @@ document.querySelectorAll(".read-block").forEach((block) => {
   renderReadBooks();
 });
 
-let poll ={
-    question:"What book shall our club read?",
-    answerWeight: [],
-    pollCount:0,
-    selectedAnswer:-1
-};
+function updateSurvey(booksList) {
+  const surveyContainer = document.getElementById("surveyContainer");
+  if (!surveyContainer) return;
 
-const pollDOM={
-    question:document.querySelector(".poll .question"),
-    answers:document.querySelector(".poll .answers")
-};
-
-function renderPoll(){
-    if(!pollDOM.question || !pollDOM.answers) return;
-    pollDOM.question.innerHTML=poll.question;
+  if (booksList.length === 0) {
+    surveyContainer.innerHTML = "<p>Add books above to generate the poll choices.</p>";
     return;
-}
+  }
 
-if(poll.answerWeights.length !==books.lenth){
-    poll.answerWeights=books.map(()=>0);
-}
+  surveyContainer.innerHTML = "";
 
-pollDOM.answers.innerHTML=books
-.map(
-    (book, i)=>`
-    <div class="answer" onclick="markAnswer(${i})">
-        <span class="answer-title">${book.title}</span>
-        <span class="percentage-bar"></span>
-        <span class="percentage-value"></span>
-    </div>
-    `
-)
-.join("");
-
-
-
-pollDOM.question.innerHTML=poll.question;
-poll.answers.map(function(answer,i){
-    return(
-        <div class="answer" onclick="markAnswer('${i}')">
-            ${answer}
-            <span class="percentage-bar"></span>
-            <span class="percentage-value"></span>
-        </div>
-    );
-}).join("");
-
-function markAnswer(i){
-    poll.selectedAnswer=+i;
-    try{
-        document.querySelector(".poll .answers .answer .selected").classList.remove("selected")
-    }catch(msg){}
-document.querySelector(".poll .answers .answer")[+i].classList.remove("selected")
-    showResult();
-}
-
-function showResults(){
-    let answers=document.querySelectorAll(".poll .answers .answers");
-    for (let i=0; i<answers.length;i++){
-        let percentage=0;
-        if(i== poll.selectedAnswer){
-            percentage=Math.round(
-                (poll.answerWeight[i]+1)*100 /(poll.pollCount+1)
-            );
-        }else{
-            percentage=Math.round(
-                (poll.answerWeight[i])*100 /(poll.pollCount+1)
-            );
-        }
-        answers[i].querySelector(".percentage-bar").style.width=percentage+"%";
-        answers[i].querySelector(".percentage-value").innerText=percentage+"%";
+const surveyJson = {
+  elements: [
+    {
+      type: "radiogroup",
+      name: "bookPoll",
+      title: "What shall our reading club read?",
+      choices: booksList.map((b) => b.title),
+      isRequired: true
     }
+  ]
+};
+
+const survey = new Model(surveyJson);
+
+survey.onComplete.add(function (sender) {
+  const userVote = sender.data; 
+  console.log("Voto registrado:", userVote);
+});
+
+survey.render(surveyContainer);
 }
