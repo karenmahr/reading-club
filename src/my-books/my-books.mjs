@@ -21,7 +21,7 @@ document.querySelectorAll(".read-block").forEach((block) => {
     readBooksContainer.innerHTML = books
       .map(
         (book) => `
-        <article class="book-card">
+        <article class="book-card-two">
           <img src="${book.image}" alt="${book.title}">
           <p>${book.title}</p>
         </article>
@@ -36,7 +36,7 @@ document.querySelectorAll(".read-block").forEach((block) => {
       : "https://via.placeholder.com/150x200?text=No+Cover";
 
     searchResults.innerHTML = `
-      <article class="book-card">
+      <article class="book-card-two">
         <img src="${imageUrl}" alt="${book.title}">
         <p>${book.title}</p>
 

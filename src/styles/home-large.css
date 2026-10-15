@@ -1,0 +1,47 @@
+@media only screen and (min-width:48rem) {
+    #hero-image{
+        width:100%;
+        height:auto;
+    }
+
+    .hamburguer {
+            display: none;
+        }
+        
+    header {
+            grid-template-columns: 24px auto;
+        }
+        
+    .navigation {
+            display: block;
+        }
+        
+    .navigation ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+    .book-card {
+        display:grid;
+        grid-template-columns: 180px 1fr;
+        grid-gap:20px;
+    }
+
+    #main-title {
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    a {
+    border-bottom: none;
+    }
+
+    #books-container{
+        display:grid;
+        grid-template-columns: 220px 220px;
+        justify-content: center;
+    }
+}
