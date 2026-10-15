@@ -111,3 +111,13 @@ survey.onComplete.add(function (sender) {
 
 survey.render(surveyContainer);
 }
+
+const search=document.getElementById("search");
+
+search.addEventListener(
+  "focus",
+  (event)=>{
+    event.target.style.background="#75404344"
+  },
+  true,
+);

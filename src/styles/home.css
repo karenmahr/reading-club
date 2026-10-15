@@ -2,7 +2,7 @@
     --neutral: #f7e7ce;
     --primary: #3A2618;
     --secondary: #002414;
-    --accent: #754043;
+    --accent: #75404344;
     --font-body: "Roboto", "Courier Prime";
 }
 
@@ -122,18 +122,26 @@ body{
     background-color: #FFF8EC;
 }
 
-h1 {
+h1, 
+#main-title {
     color: #002414;
     font-size: 2rem;
     font-family: 'Courier Prime', monospace;
     padding: 20px 0px 40px 0px;
-    margin-left: 130px;
     overflow:hidden;
     white-space:nowrap;
     width:20px;
     animation: 
         typing 4s steps(24, end) forwards,
         blink 0.75s step-end infinite;
+}
+
+#main-title{
+    margin-left: 130px;
+}
+
+h1{
+    margin-left: 340px;
 }
 
 @keyframes typing{
@@ -244,6 +252,7 @@ form button{
     font-family: 'Courier Prime', monospace;
     box-shadow:  0 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover{
